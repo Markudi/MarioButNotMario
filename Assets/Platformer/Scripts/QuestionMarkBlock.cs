@@ -1,15 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class QuestionMarkBlock : MonoBehaviour
 {
-
     
-    public TextMeshProUGUI coinText;
-    private int coinCount;
-
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +19,5 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    
     
 }

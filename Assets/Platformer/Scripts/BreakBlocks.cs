@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class BreakBlocks : MonoBehaviour
 {
@@ -46,6 +47,12 @@ public class BreakBlocks : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit mouseHit))
         {
+            
+            if (mouseHit.transform.gameObject.name == "Question(Clone)")
+            {
+                ScoreManager.playerCoins++;
+            }
+            
             Destroy(mouseHit.transform.gameObject);
         }
     }
@@ -58,6 +65,13 @@ public class BreakBlocks : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, proximityThreshold))
         {
             Debug.DrawRay(transform.position, Vector3.up * proximityThreshold, Color.red);
+            
+            //
+
+            if (hit.transform.gameObject.name == "Question(Clone)")
+            {
+                ScoreManager.playerCoins++;
+            }
 
             // Debug.Log(hit.transform.name);
             Destroy(hit.transform.gameObject);
