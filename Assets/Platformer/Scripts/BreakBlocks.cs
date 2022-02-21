@@ -66,8 +66,7 @@ public class BreakBlocks : MonoBehaviour
         {
             Debug.DrawRay(transform.position, Vector3.up * proximityThreshold, Color.red);
             
-            //
-
+            //if questionMark block then add coins to player
             if (hit.transform.gameObject.name == "Question(Clone)")
             {
                 ScoreManager.playerCoins++;

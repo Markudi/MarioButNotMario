@@ -21,8 +21,19 @@ public class CameraFollow : MonoBehaviour
     }
 
     private void FixedUpdate()
+    { 
+        CameraPosition();
+    }
+
+
+    private void CameraPosition()
     {
+        //follow player
         transform.position = player.position + offset;
+
+        
+        //if player dies -> play animation and FIX UP THIS CAMERA//TODO
+        
     }
     
 }

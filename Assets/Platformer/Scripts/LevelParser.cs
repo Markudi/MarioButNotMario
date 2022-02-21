@@ -9,7 +9,7 @@ public class LevelParser : MonoBehaviour
     public GameObject brickPrefab;
     public GameObject questionBoxPrefab;
     public GameObject stonePrefab;
-    public GameObject WaterPrefab;
+    public GameObject waterPrefab;
     public Transform environmentRoot;
 
     // --------------------------------------------------------------------------
@@ -61,24 +61,29 @@ public class LevelParser : MonoBehaviour
                 
                 if (letter == 'x')
                 {
+                    //Rock
                     var rockSprite = Instantiate(rockPrefab, environmentRoot);
                     rockSprite.transform.position = new Vector3(column, row, 0f);
                 }else if (letter == 'b')
                 {
+                    //Brick
                     var brickSprite = Instantiate(brickPrefab, environmentRoot);
                     brickSprite.transform.position = new Vector3(column, row, 0f);
                 }else if (letter == '?')
                 {
+                    //Quesiton
                     var questionMarkSprite = Instantiate(questionBoxPrefab, environmentRoot);
                     questionMarkSprite.transform.position = new Vector3(column, row, 0f);
                 }
                 else if (letter == 's')
                 {
+                    //Stone
                     var stoneSprite = Instantiate(stonePrefab, environmentRoot);
                     stoneSprite.transform.position = new Vector3(column, row, 0f);
                 }else if (letter == 'w')
                 {
-                    var waterSprite = Instantiate(WaterPrefab, environmentRoot);
+                    //Water
+                    var waterSprite = Instantiate(waterPrefab, environmentRoot);
                     waterSprite.transform.position = new Vector3(column, row, 0f);
                 }
                 
