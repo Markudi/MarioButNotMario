@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
 
     public Transform player;
     public Vector3 offset;
+    public float smoothSpeed = 10f;
     
     // Start is called before the first frame update
     void Start()
@@ -29,11 +30,12 @@ public class CameraFollow : MonoBehaviour
     private void CameraPosition()
     {
         //follow player
-        transform.position = player.position + offset;
 
+        Vector3 targetPosition = player.position + offset;
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, smoothSpeed * Time.deltaTime);
         
-        //if player dies -> play animation and FIX UP THIS CAMERA//TODO
-        
+        transform.position = smoothedPosition;
+
     }
     
 }

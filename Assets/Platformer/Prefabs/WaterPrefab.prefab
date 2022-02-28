@@ -92,7 +92,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3452087766823826691}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ddb85569646801e48b39f4eb974ae520, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
@@ -110,5 +110,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151734ba7df17324ab98d48aec7cf41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
   downOneAudio: {fileID: 8300000, guid: c5f229582bbc28f4e9cfa221511dc2c4, type: 3}

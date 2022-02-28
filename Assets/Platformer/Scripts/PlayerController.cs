@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         //Jump
         if (Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(Vector3.up * jumpHeight * Time.deltaTime, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
         }
     }
 

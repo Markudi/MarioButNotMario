@@ -6,7 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class BreakBlocks : MonoBehaviour
 {
    
-    public float proximityThreshold = 1.4f;
+    public float proximityThreshold = 1.8f;
 
     private Camera mainCamera;
     
@@ -64,23 +64,24 @@ public class BreakBlocks : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, proximityThreshold))
         {
-            Debug.DrawRay(transform.position, Vector3.up * proximityThreshold, Color.red);
-            
+
             //if questionMark block then add coins to player
             if (hit.transform.gameObject.name == "Question(Clone)")
             {
                 ScoreManager.playerCoins++;
+                ScoreManager.playerScore += 100;
+            }
+
+            if (hit.transform.gameObject.name == "Brick(Clone)")
+            {
+                ScoreManager.playerScore += 100;
             }
 
             // Debug.Log(hit.transform.name);
             Destroy(hit.transform.gameObject);
         }
-        else
-        {
-            Debug.DrawRay(transform.position, Vector3.up * proximityThreshold, Color.blue);
-        }
-        
-        
+
+
     }
     
     

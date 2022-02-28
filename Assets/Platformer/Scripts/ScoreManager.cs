@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI playerScoreText;
     public TextMeshProUGUI playerCoinsText;
 
-    private static int playerScore = 0;
+    public static int playerScore = 0;
     public static int playerCoins = 0;
     
     

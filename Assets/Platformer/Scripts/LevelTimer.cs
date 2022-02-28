@@ -9,6 +9,7 @@ public class LevelTimer : MonoBehaviour
 
 
     public TextMeshProUGUI textDisplay;
+    public TextMeshProUGUI timesUpTextDisplay;
     public int secondsLeft = 100;
 
 
@@ -31,6 +32,12 @@ public class LevelTimer : MonoBehaviour
             textDisplay.text = secondsLeft.ToString();
             StartCoroutine(Timer());
         }
+        else
+        {
+            timesUpTextDisplay.text = "Times Up! \nYou lose!";
+        }
+        
+        
     }
 
 

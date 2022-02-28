@@ -10,6 +10,8 @@ public class LevelParser : MonoBehaviour
     public GameObject questionBoxPrefab;
     public GameObject stonePrefab;
     public GameObject waterPrefab;
+    public GameObject goalPostPrefab;
+    public GameObject goalFlagPrefab;
     public Transform environmentRoot;
 
     // --------------------------------------------------------------------------
@@ -85,6 +87,14 @@ public class LevelParser : MonoBehaviour
                     //Water
                     var waterSprite = Instantiate(waterPrefab, environmentRoot);
                     waterSprite.transform.position = new Vector3(column, row, 0f);
+                }else if (letter == 'g')
+                {
+                    var goalSprite = Instantiate(goalPostPrefab, environmentRoot);
+                    goalSprite.transform.position = new Vector3(column + 0.2f, row, 0f);
+                }else if (letter == 'e')
+                {
+                    var goalFlag = Instantiate(goalFlagPrefab, environmentRoot);
+                    goalFlag.transform.position = new Vector3(column + 0.2f, row, 0f);
                 }
                 
                 
